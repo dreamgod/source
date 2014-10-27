@@ -157,10 +157,12 @@ FiFo_16_64 CH1_IN_FIFO (
 // INST_TAG_END ------ End INSTANTIATION Template --------
 
 
+reg [63:0]dout_CH1_r1;
 always @ (posedge CLK_250M)
 begin 
-	Vlaid_Data_Out <= valid_CH1;
-	Data_Out       <= dout_CH1;
+    Vlaid_Data_Out <=  valid_CH1;
+	dout_CH1_r1    <=  dout_CH1;
+	Data_Out       <=  dout_CH1_r1;
 end 
 
 //produce dataValid //
